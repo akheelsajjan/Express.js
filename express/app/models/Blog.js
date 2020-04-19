@@ -15,11 +15,11 @@ let blogSchema = new Schema(
             default: ''
         },
         description: {
-            type: String,
+            type: Array,
             default: ''
         },
         bodyHtml: {
-            type: String,
+            type: Object,
             default: ''
         },
         views: {
