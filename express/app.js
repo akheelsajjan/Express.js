@@ -26,6 +26,7 @@ app.use(globalErrorMiddleware.globalErrorHandler);
 app.use(express.static(path.join(__dirname, 'client')));
 
 
+
 const modelsPath = './app/models';
 const controllersPath = './app/controllers';
 const libsPath = './app/libs';
@@ -48,7 +49,7 @@ fs.readdirSync(modelsPath).forEach(function (file) {
 // Bootstrap route
 fs.readdirSync(routesPath).forEach(function (file) {
   if (~file.indexOf('.js')) {
-    let route = require(routesPath + '/' + file);
+     route = require(routesPath + '/' + file);
 
     route.setRouter(app);
   }
