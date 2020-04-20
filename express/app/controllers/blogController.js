@@ -249,7 +249,7 @@ let createBlog = (req, res) => {
 
                 var today = Date.now()
                 let blogId = shortid.generate()
-              
+                User = '2sKjLf2Zk'
 
                 let newBlog = new BlogModel({
 
@@ -262,13 +262,13 @@ let createBlog = (req, res) => {
                     author: req.body.author,
                     created: today,
                     lastModified: today,
-                    User: req.body.User,
+                    User:User,
                     author2:req.body.author2
                     
                 }) // end new blog model
 
-                let tags = (req.body.tags != undefined && req.body.tags != null && req.body.tags != '') ? req.body.tags.split(',') : []
-                newBlog.tags = tags
+              //  let tags = (req.body.tags != undefined && req.body.tags != null && req.body.tags != '') ? req.body.tags.split(',') : []
+               // newBlog.tags = tags
 
                 newBlog.save((err, result) => {
                     if (err) {

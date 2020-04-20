@@ -38,7 +38,7 @@ let blogSchema = new Schema(
             type: String,
             default: ''
         },
-        tags: [],
+        //tags: [],
 
         created: {
             type: Date,

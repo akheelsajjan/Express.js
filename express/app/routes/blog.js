@@ -253,10 +253,9 @@ module.exports.setRouter = function(app){
 	   }
 	 */
 
-    app.post(baseUrl+'/create', auth.isAuthorized,blogController.createBlog);
+    app.post(baseUrl+'/create',blogController.createBlog);
 
     /**
-	 * @api {post} /api/v1/blogs/create Create blog
 	 * @apiVersion 0.0.1
 	 * @apiGroup create
 	 *
